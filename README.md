@@ -1,5 +1,6 @@
 # dwmblocks
 https://github.com/torrinfail/dwmblocks
 
-## scripts
-scripts are located in my [dotfiles](https://github.com/ozpv/dotfiles/tree/main/.config/dwm)
+## installation
+`sudo make install` or `doas make install`
+make sure to set your home directory inside of the makefile
