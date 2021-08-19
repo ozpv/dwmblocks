@@ -1,3 +1,4 @@
+HOME ?= /home/ozpv
 PREFIX ?= /usr/local
 CC ?= cc
 LDFLAGS = -lX11
@@ -13,5 +14,7 @@ clean:
 install: output
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
 	install -m 0755 dwmblocks $(DESTDIR)$(PREFIX)/bin/dwmblocks
+	mkdir -p $(DESTDIR)$(HOME)/.config/dwm/
+	cp -r scripts/* $(DESTDIR)$(HOME)/.config/dwm/
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/dwmblocks
