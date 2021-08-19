@@ -18,3 +18,4 @@ install: output
 	cp -r scripts/* $(DESTDIR)$(USRHOME)/.config/dwm/
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/dwmblocks
+	rm -rf $(DESTDIR)$(USRHOME)/.config/dwm
