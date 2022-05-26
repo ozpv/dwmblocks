@@ -2,6 +2,6 @@
 https://github.com/torrinfail/dwmblocks
 
 ## installation
-Inside of [config.mk](https://github.com/ozpv/dwm/blob/main/config.mk) set 'USRHOME' to your home directory.
+Inside of the [Makefile](https://github.com/ozpv/dwmblocks/blob/main/Makefile) set 'USRHOME' to your home directory.
 
 then run `sudo make install`
