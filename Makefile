@@ -13,10 +13,10 @@ clean:
 install: output
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
 	install -m 0755 dwmblocks $(DESTDIR)$(PREFIX)/bin/dwmblocks
-	cp -r scripts/* $(DESTDIR)$(USRHOME)/bin
-	chmod 755 $(DESTDIR)$(USRHOME)/bin/network
-	chmod 755 $(DESTDIR)$(USRHOME)/bin/volume
-	chmod 755 $(DESTDIR)$(USRHOME)/bin/weather
+	cp -r scripts/* $(DESTDIR)$(PREFIX)/bin
+	chmod 755 $(DESTDIR)$(PREFIX)/bin/network
+	chmod 755 $(DESTDIR)$(PREFIX)/bin/volume
+	chmod 755 $(DESTDIR)$(PREFIX)/bin/weather
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/dwmblocks
 	rm -rf $(DESTDIR)$(USRHOME)/.config/dwm
