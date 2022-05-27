@@ -1,4 +1,3 @@
-USRHOME ?= /home/ozpv
 PREFIX ?= /usr/local
 CC ?= cc
 LDFLAGS = -lX11
@@ -14,11 +13,10 @@ clean:
 install: output
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
 	install -m 0755 dwmblocks $(DESTDIR)$(PREFIX)/bin/dwmblocks
-	mkdir -p $(DESTDIR)$(USRHOME)/.config/dwm/
-	cp -r scripts/* $(DESTDIR)$(USRHOME)/.config/dwm/
-	chmod 0755 $(DESTDIR)$(USRHOME)/.config/dwm/network.sh
-	chmod 0755 $(DESTDIR)$(USRHOME)/.config/dwm/volume.sh
-	chmod 0755 $(DESTDIR)$(USRHOME)/.config/dwm/weather.sh
+	cp -r scripts/* $(DESTDIR)$(USRHOME)/bin
+	chmod 755 $(DESTDIR)$(USRHOME)/bin/network
+	chmod 755 $(DESTDIR)$(USRHOME)/bin/volume
+	chmod 755 $(DESTDIR)$(USRHOME)/bin/weather
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/dwmblocks
 	rm -rf $(DESTDIR)$(USRHOME)/.config/dwm
