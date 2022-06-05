@@ -13,7 +13,7 @@ clean:
 install: output
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
 	install -m 0755 dwmblocks $(DESTDIR)$(PREFIX)/bin/dwmblocks
-	cp -r scripts/* $(DESTDIR)$(PREFIX)/bin
+	cp -f scripts/* $(DESTDIR)$(PREFIX)/bin
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/network
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/volume
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/weather
