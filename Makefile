@@ -19,6 +19,6 @@ install: output
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/weather
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/dwmblocks\
-		-f $(DESTDIR)$(PREFIX)/bin/network\
-		-f $(DESTDIR)$(PREFIX)/bin/volume\
-		-f $(DESTDIR)$(PREFIX)/bin/weather
+		$(DESTDIR)$(PREFIX)/bin/network\
+		$(DESTDIR)$(PREFIX)/bin/volume\
+		$(DESTDIR)$(PREFIX)/bin/weather
